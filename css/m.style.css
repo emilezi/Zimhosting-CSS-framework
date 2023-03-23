@@ -31,6 +31,21 @@ body{
 
 
 
+.animation-pop-up{
+    animation-name: pop-up-alert;
+        animation-duration: 3s;
+}
+.animation-pop-up-form{
+    animation-name: pop-up-form-alert;
+    animation-duration: 0.5s;
+}
+.animation-content{
+    animation-name: content;
+    animation-duration: 0.7s;
+}
+
+
+
 @keyframes pop-up-alert{
     from{
         top:50px;
@@ -63,16 +78,6 @@ body{
 
 
 
-.animation-pop-up{
-    animation-name: pop-up-alert;
-   	animation-duration: 3s;
-}
-.animation-content{
-    animation-name: content;
-    animation-duration: 0.7s;
-}
-
-
 .nav-color{
     background-color: rgb(51, 50, 48);
     }
@@ -80,6 +85,15 @@ body{
     .aside-color{
     background-color: rgb(44, 44, 44);
     }
+}
+
+
+
+.m-center{
+    margin: 3em auto;
+}
+.p-vertical{
+    padding:15px 0;
 }
 
 
@@ -127,6 +141,12 @@ a:hover{
     text-decoration:underline;
     color:white;
     }
+form{
+    margin:0 0 15px 0;
+}
+button{
+    margin:0 0 15px 0;
+}
 
 
 
@@ -153,6 +173,9 @@ a:hover{
     text-align: center;
     }
     form{
+    text-align: center;
+    }
+    .center{
     text-align: center;
     }
 }
@@ -238,6 +261,20 @@ input[type=button]:hover {
     cursor:pointer;
 	color:black;
 	}
+button{
+    height:30px;
+    font-size:15px;
+    background-color:transparent;
+    color:white;
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+    }
+button:hover {
+    background-color:white;
+    cursor:pointer;
+    color:black;
+    }
 input[type=submit] {
 	height:30px;
 	font-size:15px;
@@ -426,20 +463,24 @@ a:hover .burger.opened span{
 header{
  	padding: 2px 0;
  	text-align: center;
-    background-color: rgba(121, 121, 121, 0.7);
+    background-color: rgba(182, 182, 182);
     }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     header{
+    background-color: rgba(182, 182, 182, 0.8);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     }
     }
+
+
+
 @media screen and (min-width: 1001px) {
     .form{
     padding:25px 35px;
     text-align: center;
     width: 750px;
-    background-color: rgba(172, 172, 172, 0.7);
+    background-color: rgba(182, 182, 182);
     box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
     }
@@ -448,16 +489,18 @@ header{
     padding:35px 25px;
     text-align: center;
     width: 100%;
-    background-color: rgba(172, 172, 172, 0.7);
+    background-color: rgba(182, 182, 182);
     box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
     }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     .form{
+    background-color: rgba(182, 182, 182, 0.8);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     }
     }
+
 
 
 @media screen and (min-width: 1000px){
@@ -518,6 +561,9 @@ header{
     margin:2% auto;
     }
     }
+
+
+
 .content-large{
     width: 100%;
     margin:2% auto;
@@ -590,11 +636,12 @@ text-align:center;
 display: inline-block;
 vertical-align: middle;
 transition:all 0.5s;
-background-color: rgba(172, 172, 172, 0.7);
+background-color: rgba(182, 182, 182);
 box-shadow: 2px 2px 2px rgb(31, 31, 31);
 }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     .app{
+    background-color: rgba(182, 182, 182, 0.8);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     }
@@ -603,14 +650,27 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
 
 
 .pop-up-container{
-    position: absolute;
     z-index: 101;
+    position: absolute;
     width: 100%;
     opacity: 0;
     top:-150px;
 }
+.pop-up-container-form{
+    z-index: 101;
+    position: absolute;
+    width: 100%;
+    top:150px;
+}
 .pop-up-element{
     padding:18px;
+    }
+.pop-up-element-form{
+    margin: 0 auto;
+    width:210px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     }
 @media screen and (min-width: 1001px) {
     .pop-up{
@@ -618,7 +678,15 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
     padding:25px 35px;
     text-align: center;
     width: 750px;
-    background-color: rgb(172, 172, 172);
+    background-color: rgba(182, 182, 182);
+    box-shadow: 2px 2px 2px rgb(31, 31, 31);
+    }
+    .pop-up-form{
+    margin: 0 auto;
+    padding:25px 35px;
+    text-align: center;
+    width: 550px;
+    background-color: rgba(182, 182, 182);
     box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
     }
@@ -628,7 +696,15 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
     padding:35px 25px;
     text-align: center;
     width: 87%;
-    background-color: rgb(172, 172, 172);
+    background-color: rgba(182, 182, 182);
+    box-shadow: 2px 2px 2px rgb(31, 31, 31);
+    }
+    .pop-up-form{
+    margin: 0 auto;
+    padding:35px 25px;
+    text-align: center;
+    width: 84%;
+    background-color: rgba(182, 182, 182);
     box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
     }
